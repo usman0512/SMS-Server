@@ -56,7 +56,7 @@ public class RecipientController {
   }
 
   @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-  public void Delete(@PathVariable ObjectId id) {
+  public void Delete(@PathVariable("id") ObjectId id) {
     this.recipientRepository.delete(this.recipientRepository.findBy_id(id));
   }
 

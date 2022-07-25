@@ -60,7 +60,7 @@ public class OfficerController {
 
   @ApiOperation(value = "Delete this officer", nickname = "deleteOfficer")
   @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-  public void Delete(@PathVariable ObjectId id) {
+  public void Delete(@PathVariable("id") ObjectId id) {
     this.officerRepository.delete(this.officerRepository.findBy_id(id));
   }
 
